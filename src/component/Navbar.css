@@ -1,0 +1,29 @@
+.Navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(117, 102, 102, 0.5);
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.nav:hover {
+    background-color: rgb(68, 56, 237);
+    color: black;
+}

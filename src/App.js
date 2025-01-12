@@ -1,24 +1,27 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+
 import Home from './component/Home'
 import Books from './component/Books'
+import Login from './component/Login'
+import Signup from './component/Signup'
+import Navbar from './component/Navbar'
+import Error from './component/Error'
 
 export default function App() {
   return (
     <div className='body'>
-      <navbar>
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Books">Books</a></li>
-          <li><a href="#Home">Sign in</a></li>
-          <li><a href="#Home">Login</a></li>
-        </ul>
-      </navbar>
-      <Home />
-      <Books />
-      <div className='wave wave-1'></div>
-      <div className='wave wave-2'></div>
-      <div className='wave wave-3'></div>
-      <div className='wave wave-4'></div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes >
+          <Route path='/' element={<Home />} />
+          <Route path='/Books' element={<Books />} />
+          <Route path='/Signup' element={<Signup />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
